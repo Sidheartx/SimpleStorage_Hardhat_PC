@@ -9,7 +9,7 @@ async function main() {
   console.log(simpleStorage)
   console.log(network.config)
   await simpleStorage.deploymentTransaction().wait(2)
-  /*
+  /*  verification broken
   if (network.config.chainId === 11155111 && process.env.ESCAN_API_KEY) {
     
     await verify(simpleStorage.address, []) 
