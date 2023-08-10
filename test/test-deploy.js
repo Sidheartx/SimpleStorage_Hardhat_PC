@@ -22,4 +22,14 @@ describe("SimpleStorage", function() {
         const currentValue = await simpleStorage.retrieve() 
         assert.equal(currentValue.toString(), expectedValue)
     })
+    it("should store persons favourite number", async function () {
+        const expectedValue = 7;
+        const expectedName = "Sid"; 
+        const transactionResponse = await simpleStorage.addPerson(expectedName, expectedValue)
+        await transactionResponse.wait(1)
+
+        const currentValue = await simpleStorage.nameToFavouriteNumber(expectedName); 
+        expect(currentValue).to.equal(expectedValue);
+    })
+
 })
