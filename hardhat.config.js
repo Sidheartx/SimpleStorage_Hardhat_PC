@@ -2,6 +2,8 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config() 
 require("@nomicfoundation/hardhat-verify");
 require("./tasks/block-number")
+require("hardhat-gas-reporter");
+
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -25,7 +27,12 @@ module.exports = {
         chainId: 11155111, 
         gasPrice: 350000
       }, 
+      
 
   }, 
   solidity: "0.8.8", 
+  gasReporter: {
+    enabled: true
+  }
+  , 
 };
