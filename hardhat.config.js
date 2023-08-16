@@ -26,7 +26,7 @@ module.exports = {
         url: SEPOLIA_RPC_URL, 
         accounts: [PRIVATE_KEY], 
         chainId: 11155111, 
-        gasPrice: 350000
+        gasPrice: 35000000
       }, 
       
 

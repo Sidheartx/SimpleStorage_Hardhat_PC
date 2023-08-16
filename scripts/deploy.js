@@ -25,7 +25,7 @@ async function main() {
   const updatedValue = await simpleStorage.retrieve()
   console.log(`Updated Value is: ${updatedValue}`)
 }
-
+/*
 async function verify(contractAddress, args) { 
   console.log("Verifying contract...")
   try {
@@ -42,7 +42,7 @@ async function verify(contractAddress, args) {
   }
 }
 }
-
+*/
 main()
   .then(() => process.exit(0))
   .catch((error) => {
